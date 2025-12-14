@@ -1,0 +1,825 @@
+ <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>M-Sithole Digital Solutions</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Primary SEO -->
+        <meta name="title" content="M-Sithole Digital Solutions | Creative Branding, Website Design & Digital Marketing Agency">
+        <meta name="description" content="M-Sithole Digital Solutions helps businesses grow through strategic branding, professional website design, app development, social media management, and tailored digital marketing solutions. Elevate your brand’s digital presence with expert creative services.">
+        <meta name="keywords" content="website design South Africa, digital agency Pretoria, branding solutions, graphic design, social media management, app development, software development, landing pages, business branding, digital marketing company, M-Sithole Digital Solutions">
+
+        <!-- Open Graph -->
+        <meta property="og:title" content="M-Sithole Digital Solutions | Creative Digital Agency">
+        <meta property="og:description" content="Professional branding, website development, software & app development, digital marketing and creative solutions.">
+        <meta property="og:image" content="img/img1.jpg">
+        <meta property="og:url" content="https://m-sithole-digital-agency.web.app">
+        <meta property="og:type" content="website">
+
+        <!-- Twitter Card -->
+        <meta name="twitter:card" content="summary_large_image">
+        <meta name="twitter:title" content="M-Sithole Digital Solutions">
+        <meta name="twitter:description" content="Elevate your brand with creative digital solutions, website design & strategic branding.">
+        <meta name="twitter:image" content="img/img1.jpg">
+
+        <!-- Robots -->
+        <meta name="robots" content="index, follow">
+        <meta name="author" content="M-Sithole Digital Solutions">
+
+
+        <!-- Favicons -->
+        <link href="img/favicon.ico" rel="icon">
+        <link href="img/apple-touch-icon.png" rel="apple-touch-icon">
+
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto+Slab:400,700|Roboto:300,400,500,700,900" rel="stylesheet"> 
+
+        <!-- Bootstrap CSS File -->
+        <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Libraries CSS Files -->
+        <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="vendor/animate/animate.min.css" rel="stylesheet">
+        <link href="vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
+        <link href="vendor/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Main Stylesheet File -->
+        <link href="css/style.css" rel="stylesheet">
+        <style>
+        /* Pricing section: equal height cards and balanced spacing */
+        .container-fluid.py-5 .row { align-items: stretch; }
+        .container-fluid.py-5 .row .col-lg-4 { display: flex; }
+        .container-fluid.py-5 .row .col-lg-4 > div { display: flex; flex-direction: column; width: 100%; }
+        .container-fluid.py-5 .row .col-lg-4 > div .text-center.py-4,
+        .container-fluid.py-5 .row .col-lg-4 > div .text-center.text-secondary.py-4 { flex: 1; display:flex; flex-direction:column; justify-content:flex-start; }
+        .container-fluid.py-5 .row .col-lg-4 > div .btn { margin-top: auto; }
+        @media (max-width: 767.98px) {
+            .container-fluid.py-5 .row .col-lg-4 { display:block; }
+            .container-fluid.py-5 .row .col-lg-4 > div { height:auto; }
+        }
+        /* Floating WhatsApp button (bottom-left) */
+        .whatsapp-float {
+            position: fixed;
+            left: 20px;
+            bottom: 20px;
+            width: 56px;
+            height: 56px;
+            background: #00B38F; /* brighter bluish-green brand accent */
+            color: #ffffff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.18);
+            transition: transform 150ms ease, box-shadow 150ms ease;
+            z-index: 1040; /* above content but below typical modal z-index */
+        }
+        .whatsapp-float:focus,
+        .whatsapp-float:hover {
+            transform: scale(1.08);
+            box-shadow: 0 10px 26px rgba(0,0,0,0.24);
+            outline: none;
+        }
+        .whatsapp-float .fa {
+            font-size: 22px;
+        }
+        @media (max-width: 767.98px) {
+            .whatsapp-float { width: 64px; height: 64px; left: 16px; bottom: 80px; }
+            .whatsapp-float .fa { font-size: 24px; }
+        }
+        /* Client logo slider (replaces CTA content) */
+        #call-to-action { padding: 28px 0; }
+        #call-to-action .client-slider { overflow: hidden; position: relative; }
+        #call-to-action .client-inner { max-width: 1100px; margin: 0 auto; }
+        #call-to-action .slider-track { display: flex; align-items: center; gap: 56px; width: max-content; will-change: transform; animation: scroll-left 42s linear infinite; }
+        #call-to-action .slide { display:flex; flex-direction:column; align-items:center; justify-content:center; min-width:140px; }
+        #call-to-action .slide img { width:120px; height:auto; object-fit:contain; filter:grayscale(36%); opacity:0.96; transition: transform .22s ease, filter .22s ease, box-shadow .22s ease; }
+        #call-to-action .slide span { margin-top:8px; color: rgba(255,255,255,0.95); font-size:14px; letter-spacing:0.2px; }
+        #call-to-action .slide:hover img { transform: scale(1.08); filter:none; box-shadow:0 10px 26px rgba(0,0,0,0.22); }
+        #call-to-action .client-slider:hover .slider-track { animation-play-state: paused; }
+        /* continuous scroll */
+        @keyframes scroll-left { 0%{ transform: translateX(0); } 100%{ transform: translateX(-50%); } }
+        /* per-logo subtle depth pulse timed to the movement */
+        @keyframes logoPulse { 0%{ transform: scale(0.94); } 20%{ transform: scale(1.02); } 40%{ transform: scale(1.06); } 60%{ transform: scale(1.02); } 100%{ transform: scale(0.94); } }
+        #call-to-action .slide { animation: logoPulse 42s linear infinite; }
+        /* stagger pulses for up to 12 slides (adjust if you change number) */
+        #call-to-action .slider-track .slide:nth-child(1)  { animation-delay: -0s; }
+        #call-to-action .slider-track .slide:nth-child(2)  { animation-delay: -2s; }
+        #call-to-action .slider-track .slide:nth-child(3)  { animation-delay: -4s; }
+        #call-to-action .slider-track .slide:nth-child(4)  { animation-delay: -6s; }
+        #call-to-action .slider-track .slide:nth-child(5)  { animation-delay: -8s; }
+        #call-to-action .slider-track .slide:nth-child(6)  { animation-delay: -10s; }
+        #call-to-action .slider-track .slide:nth-child(7)  { animation-delay: -12s; }
+        #call-to-action .slider-track .slide:nth-child(8)  { animation-delay: -14s; }
+        #call-to-action .slider-track .slide:nth-child(9)  { animation-delay: -16s; }
+        #call-to-action .slider-track .slide:nth-child(10) { animation-delay: -18s; }
+        #call-to-action .slider-track .slide:nth-child(11) { animation-delay: -20s; }
+        #call-to-action .slider-track .slide:nth-child(12) { animation-delay: -22s; }
+        @media (max-width: 991.98px) {
+            #call-to-action .slide img { width: 96px; }
+            #call-to-action .slide { min-width: 110px; }
+            #call-to-action .slider-track { gap: 36px; animation-duration: 34s; }
+            #call-to-action .slide { animation-duration: 34s; }
+        }
+        @media (max-width: 575.98px) {
+            #call-to-action .slide img { width: 72px; }
+            #call-to-action .slide span { font-size: 12px; }
+            #call-to-action .slider-track { gap: 28px; animation-duration: 28s; }
+            #call-to-action .slide { animation-duration: 28s; }
+        }
+        </style>
+
+        <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "LocalBusiness",
+            "name": "M-Sithole Digital Solutions",
+            "url": "https://m-sithole-digital-agency.web.app",
+            "logo": "https://m-sithole-digital-agency.web.app/img/img1.jpg",
+            "description": "Creative digital agency offering branding, website design, app development, graphic design, social media management and digital marketing services in South Africa.",
+            "telephone": "+27 64 243 6568",
+            "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Pretoria",
+            "addressRegion": "Gauteng",
+            "addressCountry": "South Africa"
+     },
+            "sameAs": [
+                       "https://www.facebook.com/Msitholeholdings/",
+                       "https://www.instagram.com/andriesmolatlhegi/",
+                       "https://twitter.com/AndriesMol41629",
+                       "https://www.linkedin.com/in/andries-molatlhegi-80b6a4273/"
+                        ]
+    } 
+        </script>
+
+    </head>
+
+    <body>
+        <!-- Header Start -->
+        <header>
+            <nav>
+                <a href="index.html">Home</a>
+                <div class="dropdown">
+                    <a href="#" class="dropbtn">Explore</a>
+                    <div class="dropdown-content">
+                        <a href="about.html">About Us</a>
+                        <a href="service.html">Services</a>
+                        <a href="our-team.html">Our team</a>
+                    </div>
+                </div>
+                <a href="contact.html">Contacts</a>
+            </nav>
+        </header>
+        
+    
+        <!-- #header end -->
+
+        <!-- Intro Section Start-->
+        <div class="carousel">
+            <!-- list item -->
+            <div class="list">
+                <div class="item">
+                    <img src="img/img1.jpg" alt="M-Sithole Digital Solutions professional web development services showcase">
+                    <div class="content">
+                        <div class="author"></div>
+                        <div class="title">M-Sithole</div>
+                        <div class="topic">Digital Solutions</div>
+                        <div class="des">
+                            Transform your business with our innovative web development solutions and creative digital strategies.
+                        </div>
+                        <div class="buttons">
+                            <button>Call</button>
+                            <button>642436568</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img/img2.jpg" alt="Professional landing page design and digital marketing services">
+                    <div class="content">
+                        <div class="author"></div>
+                        <div class="title">M-Sithole </div>
+                        <div class="topic">Digital Solutions</div>
+                        <div class="des">
+                            Create compelling landing pages that convert visitors into customers with our expert design team.
+                        </div>
+                        <div class="buttons">
+                            <button>WhatsApp</button>
+                            <button>642436568</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img/img3.jpg" alt="Creative graphic design and branding solutions for South African businesses">
+                    <div class="content">
+                        <div class="author"></div>
+                        <div class="title">M-Sithole</div>
+                        <div class="topic">Digital Solutions</div>
+                        <div class="des">
+                            Stand out with stunning graphic design that captures your brand identity and engages your audience.
+                        </div>
+                        <div class="buttons">
+                            <button>Call</button>
+                            <button>642436568</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img/img4.jpg" alt="Custom software and mobile app development solutions for modern businesses">
+                    <div class="content">
+                        <div class="author"></div>
+                        <div class="title">M-Sithole</div>
+                        <div class="topic">Digital Solutions</div>
+                        <div class="des">
+                            Build powerful software and apps that streamline operations and enhance customer engagement.
+                        </div>
+                        <div class="buttons">
+                            <button>WhatsApp</button>
+                            <button>642436568</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- list thumnail -->
+            <div class="thumbnail">
+                <div class="item">
+                    <img src="img/img1.jpg" alt="Expert website developer creating responsive websites for businesses">
+                    <div class="content">
+                        <div class="title">
+                            Website Developer
+                        </div>
+                        <div class="description">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img/img2.jpg" alt="High-converting landing page design for marketing campaigns">
+                    <div class="content">
+                        <div class="title">
+                            Landing Page
+                        </div>
+                        <div class="description">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img/img3.jpg" alt="Professional graphic design showcasing brand identity and visual creativity">
+                    <div class="content">
+                        <div class="title">
+                            Graphic-Design
+                        </div>
+                        <div class="description">
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="img/img4.jpg" alt="Software and mobile app development services for innovative solutions">
+                    <div class="content">
+                        <div class="title">
+                            Software & App Development
+                        </div>
+                        <div class="description">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- next prev -->
+
+            <div class="arrows">
+                <button id="prev"><</button>
+                <button id="next">></button>
+            </div>
+            <!-- time running -->
+            <div class="time"></div>
+        </div>
+        <!-- #intro end -->
+
+        <!-- About Section Start-->
+        <section id="about">
+            <div class="container">
+                <header class="section-header">
+                    <h3>About Us</h3>
+                </header>
+                <br>
+                <br>
+
+                <h1>M-Sithole Digital Solutions – Professional Website Design & Creative Digital Agency</h1>
+
+                <br>
+                <div class="row">
+                    <div class="col-md-4 about-col-1">
+                        <div class="about-title">  
+                            <h1>Welcome to M-Sithole Digital Agency</h1>
+                            <a href="explore-more.html">Explore more</a>
+                        </div>
+                    </div>
+                    <div class="col-md-8 about-col-2">
+                        <div class="about-imgs">
+                            <div class="about-img">
+                                <img class="img-fluid" src="img/about.jpg" alt="About M-Sithole Digital Solutions team and company overview" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 about-des">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="about-des-col">
+                                    <div class="about-img">
+                                        <img class="img-fluid" src="img/about-1.jpg" alt="Creative branding and design services for business growth" />
+                                    </div>
+                                    <p>At M-Sithole Digital Solutions, we understand that impactful branding requires creativity and attention to detail. Our team is dedicated to delivering a wide range of design services that help businesses effectively communicate their message and stand out in a crowded marketplace.</p>
+                                    <a href="read-more.html">Read More</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="about-des-col">
+                                    <div class="about-img">
+                                        <img class="img-fluid" src="img/about-2.jpg" alt="Professional website development blending aesthetics and functionality" />
+                                    </div>
+                                    <p>At M-Sithole Digital Solutions, we create exceptional websites that blend aesthetics with functionality. Our expert team is committed to developing customized digital experiences that resonate with your target audience and drive business growth.</p>
+                                    <a href="read-more - 2.html">Read More</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- About Section end -->
+        
+        <!-- Speaker Section Start -->
+        <section id="speaker">
+            <div class="container">
+                <header class="section-header">
+                    <h3>Recent Digital Projects & Website Designs by M-Sithole Digital Solutions</h3>
+                </header>
+                <div class="row">
+                    <div class="col-md-6 img-cols">
+                        <div class="img-col">
+                            <img class="img-fluid" src="img/speaker-1.jpg" alt="M-Sithole Holdings website project completed by digital agency">
+                        </div>
+                    </div>
+                    <div class="col-md-6 content-cols content-cols-right">
+                        <div class="content-col">
+                            <h3>M-Sithole Holdings (Pty)Ltd </h3>
+                            <h4>Completed</h4>
+                            <p>https://andries-web.github.io/M-SitholeHoldings-website/</p>
+                            <div class="social-links">
+                                <a href="https://twitter.com/AndriesMol41629" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+                                <a href="https://web.facebook.com/Msitholeholdings/" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/andriesmolatlhegi/#" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/andries-molatlhegi-80b6a4273/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BXTwapIrrSx%2BUU0pCSBfV2w%3D%3D" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6 img-cols d-block d-md-none">
+                        <div class="img-col">
+                            <img class="img-fluid" src="img/speaker-2.jpg" alt="O Cabelo Hair salon website project available for sale">
+                        </div>
+                    </div>
+                    <div class="col-md-6 content-cols  content-cols-left">
+                        <div class="content-col">
+                            <h3>O Cabelo Hair</h3>
+                            <h4>Completed</h4>
+                            <p>Website is for sale with Name and Contents</p>
+                            <div class="social-links">
+                                <a href="https://twitter.com/AndriesMol41629" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+                                <a href="https://web.facebook.com/Msitholeholdings/" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/andriesmolatlhegi/#" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/andries-molatlhegi-80b6a4273/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BXTwapIrrSx%2BUU0pCSBfV2w%3D%3D" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-6 img-cols d-none d-md-block">
+                        <div class="img-col">
+                            <img class="img-fluid" src="img/speaker-2.jpg" alt="O Cabelo Hair salon website project available for sale">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6 img-cols">
+                        <div class="img-col">
+                            <img class="img-fluid" src="img/speaker-3.jpg" alt="BGT Granite and Tombstones website under development by digital solutions">
+                        </div>
+                    </div>
+                    <div class="col-md-6 content-cols content-cols-right">
+                        <div class="content-col">
+                            <h3>B G T Granite and Tombstones</h3>
+                            <h4>In Progress</h4>
+                            <p>Website under developments</p>
+                            <div class="social-links">
+                                <a href="https://twitter.com/AndriesMol41629" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+                                <a href="https://web.facebook.com/Msitholeholdings/" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/andriesmolatlhegi/#" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/andries-molatlhegi-80b6a4273/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BXTwapIrrSx%2BUU0pCSBfV2w%3D%3D" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row">
+                    <div class="col-md-6 img-cols d-block d-md-none">
+                        <div class="img-col">
+                            <img class="img-fluid" src="img/speaker-4.jpg" alt="Ousadia Consulting professional website completed project">
+                        </div>
+                    </div>
+                    <div class="col-md-6 content-cols  content-cols-left">
+                        <div class="content-col">
+                            <h3>Ousadia Consulting</h3>
+                            <h4>Completed</h4>
+                            <p>https://ousadiaconsulting.com/</p>
+                            <div class="social-links">
+                                <a href="https://twitter.com/AndriesMol41629" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+                                <a href="https://web.facebook.com/Msitholeholdings/" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                                <a href="https://www.instagram.com/andriesmolatlhegi/#" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+                                <a href="https://www.linkedin.com/in/andries-molatlhegi-80b6a4273/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BXTwapIrrSx%2BUU0pCSBfV2w%3D%3D" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="col-md-6 img-cols d-none d-md-block">
+                        <div class="img-col">
+                            <img class="img-fluid" src="img/speaker-4.jpg" alt="Ousadia Consulting professional website completed project">
+                        </div>
+                    </div>
+                </div>
+                <a href="our-projects.html" class="see-more-btn">See More</a>
+            </div>
+        </section>
+        <!-- Speaker Section End -->
+        
+
+        <!-- Venue Section Start -->
+        <section id="venue">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="img-col">
+                            <img class="img-fluid" src="img/venue.jpg" alt="M-Sithole Digital Solutions office and team environment in South Africa">
+                        </div>
+                    </div>
+                    <div class="col-md-6 des-cols">
+                        <div class="des-col">
+                <h2>About M-Sithole Digital Solutions</h2>
+                <h4>Your Partner in Elevating Digital Presence</h4>
+                <p> At M-Sithole Digital Solutions, we combine creativity and strategy to transform brands. As a full-service digital marketing agency under M-Sithole Holdings (Pty) Ltd. We specialize in brand strategy, social media management, website design, SEO, and online advertising.
+Our approach is simple: listen, understand, and create. We craft custom solutions that connect your brand with the right audience, helping startups and established businesses alike grow and thrive in the digital world.
+
+                </p>
+                <br>
+                <p> Our approach is simple: We listen, we understand, and we create. By combining our technical expertise with a deep understanding of market trends, we craft strategies that elevate your brand and connect you with your audience in meaningful ways. Whether you are a start-up looking to establish your online presence or an established company in need of rebranding, we are here to guide you every step of the way.
+            </p> 
+            <br>
+        </div>
+            </div>
+                </div>
+            </div>
+        </section>
+        <!-- Venue Section End -->
+
+        <!-- Ticket Section Start -->
+        <div class="container-fluid py-5">
+            <div class="container pt-5 pb-3">
+                <h1 class="display-4 text-uppercase text-center mb-5">Competitive Pricing</h1>
+                <div class="row">
+                    <div class="col-lg-4 mb-2">
+                        <div class="bg-light rounded text-center pt-5 mt-lg-5 mb-4">
+                            <h2 class="text-uppercase">Small Business Website</h2>
+                            <h6 class="text-uppercase text-body mb-5">Professional starter website</h6>
+                            <div class="text-center bg-dark rounded-circle p-4 mb-2">
+                                <h1 class="display-4 text-white mb-0">
+                                    <small class="align-top" style="font-size: 22px; line-height: 45px;">R</small>3499<small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Once off</small>
+                                </h1>
+                            </div>
+                            <div class="text-center py-4">
+                                <p>One professional responsive website with up to three pages, CMS, and initial SEO setup.</p>
+                                <p>Mobile-friendly design and easy to manage content for small businesses.</p>
+                                <p>50% deposit required on project start; balance on completion.</p>
+                                <p>Hosting not included — affordable options available.</p>
+                                <a href="https://wa.me/27642436568" target="_blank" class="btn btn-dark text-uppercase py-2 px-4 my-3">Get Package</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mb-2">
+                        <div class="bg-dark rounded text-center pt-5 mb-4">
+                            <h2 class="text-uppercase text-white">E-commerce Website</h2>
+                            <h6 class="text-uppercase text-secondary mb-5">Online store with essentials</h6>
+                            <div class="text-center bg-primary rounded-circle p-4 mb-2">
+                                <h1 class="display-4 mb-0">
+                                    <small class="align-top" style="font-size: 22px; line-height: 45px;">R</small>7499<small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ Once off</small>
+                                </h1>
+                            </div>
+                            <div class="text-center text-white py-4">
+                                <p>Complete e-commerce solution with product listings, cart, checkout, and payment integration.</p>
+                                <p>Includes shipping module, basic SEO, and invoice management.</p>
+                                <p>50% deposit required on project start; balance on completion.</p>
+                                <p>Hosting and payment gateway fees excluded — configurable to your needs.</p>
+                                <a href="https://wa.me/27642436568" target="_blank" class="btn btn-primary text-uppercase py-2 px-4 my-3">Get Package</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 mb-2">
+                        <div class="bg-light rounded text-center pt-5 mt-lg-5 mb-4">
+                            <h2 class="text-uppercase">Digital Marketing Retainer</h2>
+                            <h6 class="text-uppercase text-body mb-5">Monthly growth package</h6>
+                            <div class="text-center bg-dark rounded-circle p-4 mb-2">
+                                <h1 class="display-4 text-white mb-0">
+                                    <small class="align-top" style="font-size: 22px; line-height: 45px;">R</small>2499<small class="align-bottom" style="font-size: 16px; line-height: 40px;">/ p/m</small>
+                                </h1>
+                            </div>
+                            <div class="text-center py-4">
+                                <p>Monthly marketing retainer: content creation, 10 social posts, and campaign management.</p>
+                                <p>Includes basic SEO improvements and monthly performance reporting.</p>
+                                <p>Ad spend not included — recommended starter budget available on request.</p>
+                                <a href="https://wa.me/27642436568" target="_blank" class="btn btn-dark text-uppercase py-2 px-4 my-3">Get Package</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Ticket Section End -->
+
+        <header class="section-header">
+                        
+                        <p class="lead">We partner with businesses across industries — here are some brands we've helped grow.</p>
+                    </header>
+
+     <br>   
+                    <!-- Call To Action Start (client logo slider) -->
+        <section id="call-to-action">
+            <div class="container text-center">
+                <div class="client-inner">
+                    
+                </div>
+                <div class="client-slider" aria-hidden="false" role="region" aria-label="Client logos slider">
+                    <div class="slider-track" role="list">
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/2Gether Tavel Logo.png" alt="2Gether Travel logo - boutique travel services">
+                            <span>2Gether Tavel</span>
+                        </div>
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/AI Playground.png" alt="AI Playground SA logo - innovation lab">
+                            <span>AI Playground SA</span>
+                        </div>
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/BGT Granite.jpg" alt="BGT Granite logo - monument specialists">
+                            <span>BGT Granite</span>
+                        </div>
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/Ousadia Consulting.jpg" alt="Ousadia Consulting logo - business consultants">
+                            <span>Ousadia Consulting</span>
+                        </div>
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/BitBank SA.png" alt="BitBank SA logo - fintech partner">
+                            <span>BitBank SA</span>
+                        </div>
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/Car Duard pouch.png" alt="Car Guard Pouch logo - automotive accessory">
+                            <span>Car Guard Pouch</span>
+                        </div>
+                        <!-- repeat slides for seamless loop -->
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/divine-holdings-black-and-gold-logo.png" alt="Divine Holdings logo - investment group">
+                            <span>Divine Holdings</span>
+                        </div>
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/O_Cabelo Hair.png" alt="O Cabelo Hair logo - salon services">
+                            <span>O Cabelo Hair</span>
+                        </div>
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/ENZA_LOGO.png" alt="ENZA Petroleum logo - energy solutions">
+                            <span>ENZA Petroleum</span>
+                        </div>
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/Joey PC&LAPTOP fixing.jpeg" alt="PC & Laptop Fixing logo - tech repair">
+                            <span>PC & Laptop Fixing</span>
+                        </div>
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/kevin-light-logo.png" alt="Kevin Light Protection Services logo - security">
+                            <span>Kevin Light Protection</span>
+                        </div>
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/mafolo Bite.png" alt="Mafolo Bite logo - food outlet">
+                            <span>Mafolo Bite</span>
+                        </div>
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/NTS Consulting logoNO bg.png" alt="NTS Consulting logo - business advisory">
+                            <span>NTS Consulting</span>
+                        </div>
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/property checker ai.png" alt="Property Checker AI logo - real estate tech">
+                            <span>Property Checker AI</span>
+                        </div>
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/Pulse water.png" alt="Pulse Water logo - water solutions">
+                            <span>Pulse Water</span>
+                        </div>
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/REOLO-CONSULTING.png" alt="Reolo Consulting logo - consultancy">
+                            <span>Reolo Consulting</span>
+                        </div>
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/SH Advisory.png" alt="SH Advisory logo - advisory services">
+                            <span>SH Advisory</span>
+                        </div>
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/TL Plant & Equipments Hire.png" alt="TL Plant & Equipments Hire logo - equipment hire">
+                            <span>TL Plant & Equipments</span>
+                        </div>
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/Thabang Leruo Clothing.png" alt="Thabang Leruo Clothing logo - apparel brand">
+                            <span>Thabang Leruo Clothing</span>
+                        </div>
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/2Gether Tavel Logo.png" alt="2Gether Travel logo - boutique travel services">
+                            <span>2Gether Tavel</span>
+                        </div>
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/AI Playground.png" alt="AI Playground SA logo - innovation lab">
+                            <span>AI Playground SA</span>
+                        </div>
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/BGT Granite.jpg" alt="BGT Granite logo - monument specialists">
+                            <span>BGT Granite</span>
+                        </div>
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/Ousadia Consulting.jpg" alt="Ousadia Consulting logo - business consultants">
+                            <span>Ousadia Consulting</span>
+                        </div>
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/BitBank SA.png" alt="BitBank SA logo - fintech partner">
+                            <span>BitBank SA</span>
+                        </div>
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/Car Duard pouch.png" alt="Car Guard Pouch logo - automotive accessory">
+                            <span>Car Guard Pouch</span>
+                        </div>
+                        <!-- repeat slides for seamless loop -->
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/divine-holdings-black-and-gold-logo.png" alt="Divine Holdings logo - investment group">
+                            <span>Divine Holdings</span>
+                        </div>
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/O_Cabelo Hair.png" alt="O Cabelo Hair logo - salon services">
+                            <span>O Cabelo Hair</span>
+                        </div>
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/ENZA_LOGO.png" alt="ENZA Petroleum logo - energy solutions">
+                            <span>ENZA Petroleum</span>
+                        </div>
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/Joey PC&LAPTOP fixing.jpeg" alt="PC & Laptop Fixing logo - tech repair">
+                            <span>PC & Laptop Fixing</span>
+                        </div>
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/kevin-light-logo.png" alt="Kevin Light Protection Services logo - security">
+                            <span>Kevin Light Protection</span>
+                        </div>
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/mafolo Bite.png" alt="Mafolo Bite logo - food outlet">
+                            <span>Mafolo Bite</span>
+                        </div>
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/NTS Consulting logoNO bg.png" alt="NTS Consulting logo - business advisory">
+                            <span>NTS Consulting</span>
+                        </div>
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/property checker ai.png" alt="Property Checker AI logo - real estate tech">
+                            <span>Property Checker AI</span>
+                        </div>
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/Pulse water.png" alt="Pulse Water logo - water solutions">
+                            <span>Pulse Water</span>
+                        </div>
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/REOLO-CONSULTING.png" alt="Reolo Consulting logo - consultancy">
+                            <span>Reolo Consulting</span>
+                        </div>
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/SH Advisory.png" alt="SH Advisory logo - advisory services">
+                            <span>SH Advisory</span>
+                        </div>
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/TL Plant & Equipments Hire.png" alt="TL Plant & Equipments Hire logo - equipment hire">
+                            <span>TL Plant & Equipments</span>
+                        </div>
+                        <div class="slide" role="listitem">
+                            <img src="img/projects logo's/Thabang Leruo Clothing.png" alt="Thabang Leruo Clothing logo - apparel brand">
+                            <span>Thabang Leruo Clothing</span>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <!-- Call To Action end -->
+
+        <!-- Contact Section Start -->
+        <section id="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h3>Contact Us</h3>
+             </div>
+                <div class="row">
+                    <div class="col-md-7 g-map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3598.3304191447237!2d28.09388967511166!3d-25.593934439397675!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1ebfd0111de243e5%3A0x9678b7271343b24f!2s31%20Umabu%20St%2C%20Soshanguve%20-%20East%2C%20Soshanguve%2C%200152!5e0!3m2!1sen!2sza!4v1729832323353!5m2!1sen!2sza" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                    
+                    <div class="col-md-5 form">
+                        <form action="mailto:msitholeholdings@gmail.com" method="post" enctype="text/plain" class="contactForm">
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <input type="text" class="form-control" name="name" placeholder="Your Name" />
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <input type="email" class="form-control" name="email" placeholder="Your Email" />
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <input type="text" class="form-control" name="subject" placeholder="Subject" />
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="6" name="message" placeholder="Message"></textarea>
+                            </div>
+                            <div><button type="submit">Send Message</button></div>
+                        </form>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        <!-- Contact Section end -->
+
+            <!-- Footer Start -->
+            <footer id="footer">
+                <div class="footer-top">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="social-links">
+                                    <a href="https://twitter.com/AndriesMol41629" class="twitter" target="_blank"><i class="fa fa-twitter"></i></a>
+                                    <a href="https://web.facebook.com/Msitholeholdings/" class="facebook" target="_blank"><i class="fa fa-facebook"></i></a>
+                                    <a href="https://www.instagram.com/andriesmolatlhegi/#" class="instagram" target="_blank"><i class="fa fa-instagram"></i></a>
+                                    <a href="https://www.linkedin.com/in/andries-molatlhegi-80b6a4273/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BXTwapIrrSx%2BUU0pCSBfV2w%3D%3D" class="linkedin" target="_blank"><i class="fa fa-linkedin"></i></a>
+                                </div>
+                                <p class="footer-seo-text" style="margin-top:10px; font-size:14px; color:#fff;">
+                                     M-Sithole Digital Solutions – Professional digital marketing services including web design, SEO, social media management, and content creation for businesses worldwide.
+                                </p>
+                                
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container">
+                    <div class="copyright">
+                        &copy; 2026 Copyright. All Rights Reserved<br>
+                        
+                    </div>
+                </div>
+            </footer>
+            <!-- Footer end -->
+
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+        <!-- Floating WhatsApp button (bottom-left) -->
+        <a href="https://wa.me/27642436568?text=Hello%21%20I%27d%20like%20to%20learn%20more%20about%20M-Sithole%20Digital%20Solutions%20and%20your%20services." class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+            <i class="fa fa-whatsapp" aria-hidden="true"></i>
+        </a>
+        <!-- Uncomment below i you want to use a preloader -->
+        <!-- <div id="preloader"></div> -->
+
+        <!-- JavaScript Libraries -->
+        <script src="vendor/jquery/jquery.min.js"></script>
+        <script src="vendor/jquery/jquery-migrate.min.js"></script>
+        <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="vendor/easing/easing.min.js"></script>
+        <script src="vendor/superfish/hoverIntent.js"></script>
+        <script src="vendor/superfish/superfish.min.js"></script>
+        <script src="vendor/waypoints/waypoints.min.js"></script>
+        <script src="vendor/owlcarousel/owl.carousel.min.js"></script>
+        <script src="vendor/touchSwipe/jquery.touchSwipe.min.js"></script>
+
+        <!-- Main Javascript File -->
+        <script src="js/main.js"></script>
+
+    </body>
+</html>

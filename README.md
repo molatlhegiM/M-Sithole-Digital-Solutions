@@ -81,5 +81,4 @@ If you'd like, I can:
 
 ---
 
-M-Sithole Digital Solutions — Professional web design, branding and digital marketing to help small businesses grow.# M-Sithole-Digital-Solutions
-Professional Website Design &amp; Creative Digital Agency
+M-Sithole Digital Solutions — Professional web design, branding and digital marketing to help small businesses grow.
